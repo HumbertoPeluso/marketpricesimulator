@@ -10,6 +10,12 @@ public class Investor {
     private List<Share>shares = new ArrayList<>();
     private String name;
 
+    public Investor(int id, double budget, String name) {
+        this.id = id;
+        this.budget = budget;
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }

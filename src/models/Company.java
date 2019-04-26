@@ -9,7 +9,7 @@ public class Company {
     private List<Share>shares = new ArrayList<>();
     private double sharePrice;
     private String name;
-    private int numberOfSoldShares;
+    private int numberOfSoldShares =0;
     private double totalValueOfSoldShares;
     private double capital;
 
@@ -64,10 +64,7 @@ public class Company {
     }
 
     public double getTotalValueOfSoldShares() {
-        return totalValueOfSoldShares;
+        return numberOfSoldShares*sharePrice;
     }
 
-    public void setTotalValueOfSoldShares(double totalValueOfSoldShares) {
-        this.totalValueOfSoldShares += totalValueOfSoldShares;
-    }
 }

@@ -1,4 +1,5 @@
 import models.Company;
+import models.Investor;
 import models.Share;
 import utils.RandomGenerate;
 
@@ -25,6 +26,30 @@ public class Main {
            System.out.println();
            System.out.println("...................");
        }
+
+        System.out.println();
+        System.out.println();
+
+       //create investors
+        List<Investor>investorList = createInvestors();
+        for(Investor i:investorList){
+            System.out.println("...................");
+            System.out.println();
+            System.out.println("Investor name: "+ i.getName());
+            System.out.print("Budget: ");
+            System.out.printf("%.2f", + i.getBudget());
+            System.out.println();
+            System.out.println("...................");
+        }
+    }
+
+    private static List<Investor> createInvestors() {
+        List<Investor>investors = new ArrayList<>();
+        for (int i=1; i<=100;i++){
+            Investor investor = new Investor(2000+i, RandomGenerate.generateBudget(), "Fulano"+i);
+            investors.add(investor);
+        }
+        return investors;
     }
 
     private static List<Company> createCompanies() {
