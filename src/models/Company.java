@@ -13,6 +13,12 @@ public class Company {
     private double totalValueOfSoldShares;
     private double capital;
 
+    public Company(int id, double sharePrice, String name) {
+        this.id = id;
+        this.sharePrice = sharePrice;
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }

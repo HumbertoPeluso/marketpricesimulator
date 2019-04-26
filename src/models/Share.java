@@ -3,8 +3,12 @@ package models;
 public class Share {
 
     private int id;
-    private  Company InitalOwnner;
-    private Company currentOwner;
+    private  Company ownner;
+
+    public Share(int id, Company ownner) {
+        this.id = id;
+        this.ownner = ownner;
+    }
 
     public int getId() {
         return id;
@@ -14,19 +18,11 @@ public class Share {
         this.id = id;
     }
 
-    public Company getInitalOwnner() {
-        return InitalOwnner;
+    public Company getOwnner() {
+        return ownner;
     }
 
-    public void setInitalOwnner(Company initalOwnner) {
-        InitalOwnner = initalOwnner;
-    }
-
-    public Company getCurrentOwner() {
-        return currentOwner;
-    }
-
-    public void setCurrentOwner(Company currentOwner) {
-        this.currentOwner = currentOwner;
+    public void setOwnner(Company ownner) {
+        this.ownner = ownner;
     }
 }
